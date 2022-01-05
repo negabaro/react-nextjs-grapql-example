@@ -1,0 +1,16 @@
+import { gql } from "@apollo/client";
+import { User } from "../types";
+
+export const USERS_QUERY = gql`
+  query {
+    users {
+      id
+      name
+      email
+    }
+  }
+`;
+
+export interface UsersData {
+  users: User[];
+}
